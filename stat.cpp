@@ -23,8 +23,18 @@ for(int i=0;i<max;i++){
 }
 float ave=sum/max;
 float med=0;
-  //needs to invert the numbers
+ 
 float temp;
+    for(int i=0;i<max;i++){
+     for(int j=0;j<max-i-1;j++){
+      if(list[j]>list[j+1]){
+       temp=list[i];
+          list[j]=list[j+1];
+          list[j+1]=temp;
+      }
+     }
+        
+    }
 if(max%2==0){
 
 med=(list[max/2]+list[(max/2)-1])/2;
